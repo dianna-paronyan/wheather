@@ -1,9 +1,11 @@
+const form = document.querySelector('form');
 const btn = document.querySelector("button");
 const input = document.querySelector("input");
 const forecast_div = document.querySelector(".forecast");
 const API_KEY = "b0a276daf292b30e22439b0fca835ba4";
 
-function showForecast() {
+function showForecast(e) {
+    e.preventDefault();
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${API_KEY}&units=metric`
   )
@@ -19,4 +21,4 @@ function showForecast() {
     });
 }
 
-btn.addEventListener("click", showForecast);
+form.addEventListener("submit", showForecast);
