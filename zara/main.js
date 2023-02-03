@@ -1,36 +1,41 @@
 const input = document.querySelector('#input');
 const showBox = document.querySelector('.show');
 const btn = document.querySelector('button');
-
-// Get the modal
 const modal = document.getElementById("myModal");
+const form = document.querySelector('form');
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const API_KEY = 'ec88bbe253f7310a41ce04ba00e0fc1b';
 
-const API_KEY = '968d6d0c7091bb7ada936d49741a8185';
+form.addEventListener('click', showData);
 
-btn.addEventListener('click', showData);
-input.addEventListener('keyup', function(event) {
-  if (event.keyCode === 13) {
-    showData();
-  }
-});
+const itemsArr = [];
 
-function showData() {
+function showData(event) {
+    event.preventDefault();
+    const itemsArray = document.querySelectorAll('.item');
+    if (itemsArray.length === 8) {
+        location.reload();       
+    }
     const cityName = input.value;
     input.value = '';
 
     if (cityName === '') {
         return;
     }
+
+    if (itemsArr.includes(cityName.toLowerCase())) {
+        showModal('This city already inputted');
+        return;
+    } else {
+        itemsArr.push(cityName.toLowerCase());
+    }
+
     try {
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`)
             .then((response) => {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
             const divItem = document.createElement('div');
             const h3 = document.createElement('h3');
             let pTemp = document.createElement('p');
@@ -50,32 +55,25 @@ function showData() {
             divItem.classList.add('item');
             showBox.appendChild(divItem);
         }).catch(() => {
-            modal.style.display = "block";
-              
-            // span.onclick = function() {
-            //     modal.style.display = "none";
-            // }
-              
-            window.onclick = function(event) {
-                if (event.target === modal) {
-                  modal.style.display = "none";
-                }
-            }
+            itemsArr.pop();
+            showModal('Please search for a valid city');
         });
     } catch(error) {
         console.error(error);
     }
 }
 
-// function showData() {
-//     const cityName = input.value;
-//     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}`)
-//         .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     });
-// }
+function showModal(msg) {
+    document.querySelector('.modal-p').textContent = msg;
+    modal.style.display = "block";
+    input.blur();
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            input.focus();
+        }
+    }
+}
 
 
