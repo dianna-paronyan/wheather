@@ -144,6 +144,7 @@ five_days_link.addEventListener("click", () => {
         p.textContent = `${Math.round(res.list[i].main.temp)} °C`;
         const icon = document.createElement("img");
         icon.src = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${res.list[i].weather[0]["icon"]}.svg`;
+        icon.style.width = '50px'
         container.append(day, icon, p);
         temp.append(container);
       }
