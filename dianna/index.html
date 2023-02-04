@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e3325bedec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
     <title>Weather</title>
-</head>
-<body>
-    <div class="form_block">
-        <form action="">
-            <input type="text">
-            <button>show</button>
-        </form>
-    </div>
-    <div class="container">
+  </head>
+  <body>
+    <span class="load"></span>
+    <main>
+      <div class="left_block">
+        <h3>The Weather</h3>
         <div class="forecast">
-            <div class="left_side"></div>
-            <div class="right_side"></div>
+          <div class="right_side"></div>
+          <div class="left_side"></div>
         </div>
-        <div class="description">
-            <!-- <div class="min"></div>
-            <div class="max"></div>
-            <div class="feels_like"></div> -->
+      </div>
+      <section class="right_block">
+        <div class="form_block">
+          <form action="">
+            <span>
+              <input type="text" />
+              <p class="error"></p>
+            </span>
+            <button><i class="fas fa-search"></i></button>
+          </form>
         </div>
-    </div>
+        <div class="content">
+          <div class="description"></div>
+        </div>
+      </section>
+    </main>
+    <a href="#" class="five_days">Weather for 5 days</a>
+    <div class="temp"></div>
 
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
