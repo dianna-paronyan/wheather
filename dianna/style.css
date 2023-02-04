@@ -26,12 +26,10 @@ main {
   width: 550px;
   height: 80px;
   margin: auto;
-  /* margin-top: 50px; */
   background-color: rgba(17, 17, 17, 0.6);
 }
 form {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   margin-top: 20px;
 }
@@ -125,8 +123,8 @@ button {
   padding: 10px;
 }
 .five_days_content{
-    height: 220px;
-    background-color: rgb(226, 210, 188);
+    height: 226px;
+    background-color: rgb(221, 202, 174);
     padding-top: 15px;
 }
 .temp {
