@@ -10,6 +10,7 @@ const five_days_link = document.querySelector(".five_days");
 const temp = document.querySelector(".temp");
 const error = document.querySelector(".error");
 const content = document.querySelector(".content");
+const five_days_err = document.querySelector('.five_days_err');
 const API_KEY = "b0a276daf292b30e22439b0fca835ba4";
 
 let loading = true;
@@ -136,6 +137,7 @@ five_days_link.addEventListener("click", () => {
       console.log(res);
       for (let i = 0; i < res.list.length; i += 8) {
         console.log(res.list[i]);
+        five_days_err.textContent = '';
         const container = document.createElement("div");
         container.className = "five_days_block";
         const day = document.createElement("p");
@@ -148,5 +150,8 @@ five_days_link.addEventListener("click", () => {
         container.append(day, icon, p);
         temp.append(container);
       }
+    }).catch((err)=>{
+      five_days_err.textContent = 'Failed to load';
+      five_days_err.style.color = 'red';
     });
 });
