@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e3325bedec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <span class="load"></span>
+    <main>
+      <div class="left_block">
+        <h3>The Weather</h3>
+        <div class="forecast">
+          <div class="right_side"></div>
+          <div class="left_side"></div>
+        </div>
+      </div>
+      <section class="right_block">
+        <div class="form_block">
+          <form action="">
+            <span>
+              <input type="text" />
+              <p class="error"></p>
+            </span>
+            <button><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+        <div class="content">
+          <div class="description"></div>
+        </div>
+      </section>
+    </main>
+    <section class="five_days_content">
+        <a href="#" class="five_days">Weather for 5 days</a>
+        <div class="temp">
+            <p class="five_days_err"></p>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
