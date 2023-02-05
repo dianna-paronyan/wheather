@@ -14,6 +14,11 @@ main {
   justify-content: space-between;
   padding-left: 30px;
 }
+h3{
+  font-size: 23px;
+  color: rgb(48, 48, 48);
+  
+}
 
 .right_block {
   background-color: rgba(96, 96, 96, 0.6);
@@ -97,7 +102,7 @@ button {
 .description {
   width: 500px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,14 +118,21 @@ button {
 .wind {
   color: white;
   width: 150px;
+  height: 70px;
   margin: auto;
   background-color: rgba(17, 17, 17, 0.6);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   gap: 7px;
   padding: 10px;
+}
+.div1,.div2,.div3,.feels_like_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
 .five_days_content{
     height: 226px;
@@ -157,4 +169,8 @@ button {
 .five_days {
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(64, 64, 119);
+
 }
