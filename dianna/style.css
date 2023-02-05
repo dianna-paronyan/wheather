@@ -69,7 +69,7 @@ button {
   gap: 50px;
   margin: auto;
 }
-.forecast {
+.current_forecast {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,14 +91,14 @@ button {
   gap: 50px;
 }
 
-.content {
+.current_content_details {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.description {
+.current_details {
   width: 500px;
   margin: auto;
   margin-top: 140px;
@@ -127,9 +127,9 @@ button {
   gap: 7px;
   padding: 10px;
 }
-.div1,
-.div2,
-.div3,
+.pressure_div,
+.humidity_div,
+.wind_block,
 .feels_like_div {
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@ button {
   background-color: rgb(221, 202, 174);
   padding-top: 15px;
 }
-.temp {
+.temperature_div {
   display: flex;
   justify-content: center;
   align-items: center;
