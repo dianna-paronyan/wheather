@@ -129,7 +129,7 @@ button {
 }
 .pressure_div,
 .humidity_div,
-.wind_block,
+.wind_div,
 .feels_like_div {
   display: flex;
   justify-content: center;
