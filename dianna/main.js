@@ -84,14 +84,14 @@ function showCurrentForecast(e) {
         max_temp.textContent = `${Math.round(res.main.temp_max)} °C`;
         max.append(max_arrow, max_temp);
 
-        const feels_like_div = document.createElement('div');
-        feels_like_div.className = 'feels_like_div';
+        const feels_like_div = document.createElement("div");
+        feels_like_div.className = "feels_like_div";
         const feels_icon = document.createElement("p");
         feels_icon.innerHTML = `\&#9786;`;
-        feels_icon.style.fontSize = '24px'
-        const feels_like_text = document.createElement('p');
-        feels_like_text.textContent = 'Feels like';
-        feels_like_div.append(feels_icon,feels_like_text)
+        feels_icon.style.fontSize = "24px";
+        const feels_like_text = document.createElement("p");
+        feels_like_text.textContent = "Feels like";
+        feels_like_div.append(feels_icon, feels_like_text);
         const feels = document.createElement("p");
         feels.textContent = `${Math.round(res.main.feels_like)} °C`;
         feels_like.append(feels_like_div, feels);
@@ -173,7 +173,7 @@ function showFiveDaysForecast(e) {
         const p = document.createElement("p");
         p.textContent = `${Math.round(res.list[i].main.temp)} °C`;
         const icon = document.createElement("img");
-        icon.src = `http://openweathermap.org/img/wn/${res.list[i].weather[0]["icon"]}@2x.png`
+        icon.src = `http://openweathermap.org/img/wn/${res.list[i].weather[0]["icon"]}@2x.png`;
         icon.style.width = "50px";
         container.append(day, icon, p);
         temp.append(container);

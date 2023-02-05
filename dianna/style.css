@@ -14,10 +14,9 @@ main {
   justify-content: space-between;
   padding-left: 30px;
 }
-h3{
+h3 {
   font-size: 23px;
   color: rgb(48, 48, 48);
-  
 }
 
 .right_block {
@@ -128,16 +127,19 @@ button {
   gap: 7px;
   padding: 10px;
 }
-.div1,.div2,.div3,.feels_like_div{
+.div1,
+.div2,
+.div3,
+.feels_like_div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3px;
 }
-.five_days_content{
-    height: 226px;
-    background-color: rgb(221, 202, 174);
-    padding-top: 15px;
+.five_days_content {
+  height: 226px;
+  background-color: rgb(221, 202, 174);
+  padding-top: 15px;
 }
 .temp {
   display: flex;
@@ -146,15 +148,14 @@ button {
   gap: 50px;
   margin-top: 30px;
 }
-.five_days_block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    /* background-color: rgba(140, 127, 106, 0.6); */
+.five_days_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .name_date_div,
@@ -167,10 +168,9 @@ button {
 }
 
 .five_days {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(64, 64, 119);
-
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(64, 64, 119);
 }
