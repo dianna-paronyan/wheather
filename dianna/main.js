@@ -11,7 +11,6 @@ const temperature_div = document.querySelector(".temperature_div");
 const error = document.querySelector(".error");
 const current_content_details = document.querySelector(".current_content_details");
 const five_days_err = document.querySelector(".five_days_err");
-const loading_icon = document.createElement("img");
 
 const API_KEY = "b0a276daf292b30e22439b0fca835ba4";
 
@@ -22,6 +21,7 @@ let input_value;
 
 function showCurrentForecast(e) {
   e.preventDefault();
+  const loading_icon = document.createElement("img");
   current_details.textContent = "";
   left_side.textContent = "";
   right_side.textContent = "";
@@ -141,7 +141,7 @@ function showCurrentForecast(e) {
         wind_icon.style.width = "17px";
         const txt3 = document.createElement("p");
         txt3.textContent = "Wind";
-        wind_block.append(wind_icon, txt3);
+        wind_div.append(wind_icon, txt3);
         const wind_text = document.createElement("p");
         wind_text.textContent = `${wind.speed} m/s`;
         wind_block.append(wind_div, wind_text);
@@ -154,6 +154,7 @@ function showCurrentForecast(e) {
     })
     .catch((err) => {
       loading = false;
+      loading_icon.src = '';
       error.textContent = "Type valid city name";
       error.style.color = "red";
     });
